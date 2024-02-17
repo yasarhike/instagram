@@ -1,0 +1,92 @@
+package com.instagram.feature.service.content.contentactivity;
+
+import com.instagram.feature.model.content.contentactivity.Comment;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+/**
+ * <p></p>
+ * Interface for managing generic comment service operations.
+ * </p>
+ *
+ * @author Mohamed Yasar
+ * @version 1.0 6 Feb 2024
+ */
+public class ReelCommentService {
+
+    private static ReelCommentService commentService;
+    private static int commentId;
+    private final Map<Integer, List<Comment>> comments;
+
+    /**
+     * <p>
+     * Private constructor to restrict the object creation outside of the class.
+     * </p>
+     */
+    private ReelCommentService() {
+        comments = new HashMap<>();
+    }
+
+    /**
+     * <p>
+     * Returns the singleton instance of PostCommentService class.
+     * </p>
+     *
+     * @return The singleton instance of PostCommentService class.
+     */
+    public static ReelCommentService getInstance() {
+        return commentService == null ? commentService = new ReelCommentService() : commentService;
+    }
+
+    /**
+     * <p>
+     * Adds an object to the commentService for the specified user.
+     * </p>
+     *
+     * @param comment Refers the object to be added.
+     * @param reelId  Refers the reelId of the user adding the object.
+     * @return True if the object is added successfully, otherwise false.
+     */
+    public boolean add(final int reelId, final Comment comment) {
+        if (comments.containsKey(reelId)) {
+            comment.setCommentId(commentId++);
+            comments.get(reelId).add(comment);
+        } else {
+            comment.setCommentId(commentId++);
+            List <Comment> element = new ArrayList<>();
+            element.add(comment);
+            comments.put(reelId, element);
+        }
+        return true;
+    }
+
+    /**
+     * <p>
+     * removes an object to the service for the specified user.
+     * </p>
+     *
+     * @param reelId Refers the object to be removed.
+     * @return True if the object is removed successfully, otherwise false.
+     */
+    public boolean remove(final int reelId) {
+        if (comments.containsKey(reelId)) {
+            comments.remove(reelId);
+            return true;
+        }
+        return false;
+    }
+
+    /**
+     * <p>
+     * removes an object to the service for the specified user.
+     * </p>
+     *
+     * @param reelId Refers the id of the reel.
+     * @return List if the object is fetched successfully, otherwise null.
+     */
+    public List<Comment> get(final int reelId) {
+        return comments.get(reelId);
+    }
+}
