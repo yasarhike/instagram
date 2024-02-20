@@ -17,7 +17,7 @@ import java.util.Map;
 public class ReelsFeedController {
 
     private static ReelsFeedController reelsManagerController;
-    private final com.instagram.feature.service.ReelsFeedController reelsManagerService;
+    private final ReelsFeedController reelsManagerService;
 
     /**
      * <p>
@@ -25,7 +25,7 @@ public class ReelsFeedController {
      * </p>
      */
     private ReelsFeedController() {
-        reelsManagerService = com.instagram.feature.service.ReelsFeedController.getInstance();
+        reelsManagerService = ReelsFeedController.getInstance();
     }
 
     /**
