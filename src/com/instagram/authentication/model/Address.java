@@ -13,7 +13,7 @@ public class Address {
     private String country;
     private String countryCode;
     private String state;
-    private String doorNumber;
+    private int doorNumber;
     private String streetName;
 
     public String getStreetName() {
@@ -24,11 +24,11 @@ public class Address {
         this.streetName = streetName;
     }
 
-    public String getDoorNumber() {
+    public int getDoorNumber() {
         return doorNumber;
     }
 
-    public void setDoorNumber(final String doorNumber) {
+    public void setDoorNumber(final int doorNumber) {
         this.doorNumber = doorNumber;
     }
 

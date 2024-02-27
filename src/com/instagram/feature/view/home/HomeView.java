@@ -57,7 +57,7 @@ public class HomeView {
         int userChoice = 0;
 
         try {
-            logger.info("Press 1 - Feed\nPress 2 - Search\nPress 3 - Post\nPress 4 - Reels\nPress 5 - Profile\nPress 6 - Logout");
+            logger.info("Press 1 - Feed\nPress 2 - Search\nPress 3 - Upload\nPress 4 - Reels\nPress 5 - Profile\nPress 6 - Logout");
             userChoice = Integer.parseInt(scanner.nextLine());
         } catch (NumberFormatException exception) {
             logger.error("Enter a valid input");

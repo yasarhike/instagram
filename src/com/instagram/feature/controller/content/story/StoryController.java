@@ -1,7 +1,8 @@
 package com.instagram.feature.controller.content.story;
 
 import com.instagram.feature.model.content.story.Story;
-import com.instagram.feature.service.content.story.StoryServiceImplementation;
+import com.instagram.feature.service.content.story.StoryServiceImpl;
+import com.instagram.feature.service.content.story.dao.StoryServiceDAOImpl;
 
 import java.util.Map;
 
@@ -16,7 +17,7 @@ import java.util.Map;
 public class StoryController {
 
     private static StoryController storyController;
-    private final StoryServiceImplementation storyService;
+    private final StoryServiceDAOImpl storyServiceDAOImpl;
 
     /**
      * <p>
@@ -24,7 +25,7 @@ public class StoryController {
      * </p>
      */
     private StoryController() {
-        storyService = StoryServiceImplementation.getInstance();
+        storyServiceDAOImpl = StoryServiceDAOImpl.getInstance();
     }
 
     /**
@@ -48,7 +49,7 @@ public class StoryController {
      * @return True if the story is added successfully, otherwise false.
      */
     public boolean addStory(final Story story, final Integer userId) {
-        return storyService.addStory(story, userId);
+        return storyServiceDAOImpl.addStory(story, userId);
     }
 
     /**
@@ -61,17 +62,7 @@ public class StoryController {
      * @return True if the story is removed successfully, otherwise false.
      */
     public boolean removeStory(final Integer storyId, final Integer userId) {
-        return storyService.removeStory(storyId, userId);
+        return false;
     }
 
-    /**
-     * <p>
-     * Retrieves all story.
-     * </p>
-     *
-     * @return Map contains the user story.
-     */
-    public Map<Integer, Map<Integer, Story>> getStory() {
-        return storyService.getStory();
-    }
 }

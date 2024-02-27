@@ -6,6 +6,7 @@ import com.instagram.scanner.SingletonScanner;
 import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Logger;
 
+import java.sql.SQLException;
 import java.util.Scanner;
 
 /**
@@ -66,8 +67,9 @@ public class AuthenticationView {
         switch (userChoice) {
             case 1:
                 signUp();
+                break;
             case 2:
-                signIn();
+
             case 3:
                 System.exit(0);
             default:
@@ -87,22 +89,6 @@ public class AuthenticationView {
             HomeView.getInstance().home(user);
         } else {
             signUp();
-        }
-    }
-
-    /**
-     * <p>
-     * Displays the login page and allows the user to sign in.
-     * </p>
-     */
-    public void signIn() {
-        final User user = profileView.getProfile();
-
-        if (user != null) {
-            logger.debug("Login successful");
-            HomeView.getInstance().home(user);
-        } else {
-            signIn();
         }
     }
 }

@@ -1,7 +1,7 @@
 package com.instagram.feature.controller.contentactivity;
 
 import com.instagram.feature.model.content.contentactivity.Comment;
-import com.instagram.feature.service.content.contentactivity.ReelCommentService;
+import com.instagram.feature.service.content.contentactivity.ReelCommentServiceImpl;
 
 /**
  * <p>
@@ -14,7 +14,7 @@ import com.instagram.feature.service.content.contentactivity.ReelCommentService;
 public class ReelCommentController {
 
     private static ReelCommentController commentController;
-    private final ReelCommentService commentService;
+    private final ReelCommentServiceImpl commentService;
 
     /**
      * <p>
@@ -22,7 +22,7 @@ public class ReelCommentController {
      * </p>
      */
     private ReelCommentController() {
-        commentService = ReelCommentService.getInstance();
+        commentService = ReelCommentServiceImpl.getInstance();
     }
 
     /**

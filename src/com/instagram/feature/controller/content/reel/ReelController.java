@@ -1,7 +1,8 @@
 package com.instagram.feature.controller.content.reel;
 
 import com.instagram.feature.model.content.reel.Reel;
-import com.instagram.feature.service.content.reel.ReelServiceImplementation;
+import com.instagram.feature.service.content.reel.ReelServiceImpl;
+import com.instagram.feature.service.content.reel.dao.ReelServiceDAOImpl;
 
 import java.util.Map;
 
@@ -17,7 +18,7 @@ import java.util.Map;
 public class ReelController {
 
     private static ReelController reelController;
-    private final ReelServiceImplementation reelService;
+    private final ReelServiceDAOImpl reelServiceDAOImpl;
 
     /**
      * <p>
@@ -25,7 +26,7 @@ public class ReelController {
      * </p>
      */
     private ReelController() {
-        reelService = ReelServiceImplementation.getInstance();
+        reelServiceDAOImpl = ReelServiceDAOImpl.getInstance();
     }
 
     /**
@@ -49,7 +50,7 @@ public class ReelController {
      * @return True if the reel is added successfully, otherwise false.
      */
     public boolean addReel(final Reel reel, final Integer userId) {
-        return reelService.addReel(reel, userId);
+        return reelServiceDAOImpl.addReel(reel, userId);
     }
 
     /**
@@ -62,17 +63,6 @@ public class ReelController {
      * @return True if the reel is removed successfully, otherwise false.
      */
     public boolean removeReel(final Integer reelId, final Integer userId) {
-        return reelService.removeReel(reelId, userId);
-    }
-
-    /**
-     * <p>
-     * Retrieves all reels.
-     * </p>
-     *
-     * @return Map contains the user reels.
-     */
-    public Map<Integer, Map<Integer, Reel>> getReel() {
-        return reelService.getReel();
+        return false;
     }
 }

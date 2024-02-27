@@ -1,7 +1,7 @@
 package com.instagram.feature.service.content;
 
 /**
- * <p></p>
+ * <p>
  * Interface for managing generic service operations.
  * </p>
  *

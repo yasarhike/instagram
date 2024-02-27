@@ -1,6 +1,6 @@
 package com.instagram.feature.model.content.post;
 
-import java.time.Instant;
+import com.instagram.feature.service.content.contentactivity.media.Media;
 
 /**
  * <p>
@@ -12,15 +12,11 @@ import java.time.Instant;
  */
 public class Post {
 
-    private String author;
     private String caption;
-    private String type;
+    private Media type;
     private boolean isPrivate;
-    private Instant timestamp;
     private int postId;
-    private int likes;
-    private int comments;
-    private int share;
+    private int userId;
 
     public boolean isPrivate() {
         return isPrivate;
@@ -28,14 +24,6 @@ public class Post {
 
     public void setPrivate(final boolean isPrivate) {
         this.isPrivate = isPrivate;
-    }
-
-    public String getAuthor() {
-        return author;
-    }
-
-    public void setAuthor(final String author) {
-        this.author = author;
     }
 
     public String getCaption() {
@@ -46,20 +34,12 @@ public class Post {
         this.caption = caption;
     }
 
-    public String getType() {
+    public Media getType() {
         return type;
     }
 
-    public void setType(final String type) {
+    public void setType(final Media type) {
         this.type = type;
-    }
-
-    public Instant getTimestamp() {
-        return timestamp;
-    }
-
-    public void setTimestamp() {
-        this.timestamp = Instant.now();
     }
 
     public int getPostId() {
@@ -70,27 +50,11 @@ public class Post {
         this.postId = postId;
     }
 
-    public int getComments() {
-        return comments;
+    public void setUserId(int userId) {
+        this.userId = userId;
     }
 
-    public void setComments(final int comments) {
-        this.comments = comments;
-    }
-
-    public int getLikes() {
-        return likes;
-    }
-
-    public void setLikes(final int likes) {
-        this.likes = likes;
-    }
-
-    public int getShare() {
-        return share;
-    }
-
-    public void setShare(final int share) {
-        this.share = share;
+    public int getUserId() {
+        return userId;
     }
 }

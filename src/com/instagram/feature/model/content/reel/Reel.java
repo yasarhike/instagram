@@ -1,7 +1,5 @@
 package com.instagram.feature.model.content.reel;
 
-import java.time.Instant;
-
 /**
  * <p>
  * Hold the reel details of the user.
@@ -12,15 +10,11 @@ import java.time.Instant;
  */
 public class Reel {
 
-    public int likes;
-    private String author;
     private String caption;
     private boolean isPrivate;
     private int reelId;
-    private Instant timeStamp;
-    private int views;
-    private int comments;
-    private int share;
+    private int userId;
+    private String duration;
 
     public boolean isPrivate() {
         return isPrivate;
@@ -28,14 +22,6 @@ public class Reel {
 
     public void setPrivate(final boolean isPrivate) {
         this.isPrivate = isPrivate;
-    }
-
-    public String getAuthor() {
-        return author;
-    }
-
-    public void setAuthor(final String author) {
-        this.author = author;
     }
 
     public int getReelId() {
@@ -54,43 +40,19 @@ public class Reel {
         this.caption = caption;
     }
 
-    public Instant getTimeStamp() {
-        return timeStamp;
+    public void setUserId(int userId) {
+        this.userId = userId;
     }
 
-    public void setTimeStamp() {
-        this.timeStamp = Instant.now();
+    public int getUserId() {
+        return userId;
     }
 
-    public int getViews() {
-        return views;
+    public String getDuration() {
+        return duration;
     }
 
-    public void setViews(int views) {
-        this.views = views;
-    }
-
-    public int getLikes() {
-        return likes;
-    }
-
-    public void setLikes(final int likes) {
-        this.likes = likes;
-    }
-
-    public int getComments() {
-        return comments;
-    }
-
-    public void setComments(final int comments) {
-        this.comments = comments;
-    }
-
-    public int getShare() {
-        return share;
-    }
-
-    public void setShare(final int share) {
-        this.share = share;
+    public void setDuration(String duration) {
+        this.duration = duration;
     }
 }

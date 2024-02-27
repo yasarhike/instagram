@@ -71,7 +71,6 @@ public class ReelsFeedView {
                 for (final int innerElement : innerMap.keySet()) {
 
                     if (!innerMap.get(innerElement).isPrivate()) {
-                        innerMap.get(innerElement).setViews(innerMap.get(innerElement).getViews() + 1);
                         displayReelContent(innerMap.get(innerElement), user);
                     }
                 }
@@ -83,11 +82,7 @@ public class ReelsFeedView {
     public void displayReelContent(final Reel reel, final User user) {
         logger.info(
                 "Reel id         : " + reel.getReelId() +
-                        "\nAuthor        : " + reel.getAuthor() +
                         "\nCaption       : " + reel.getCaption() +
-                        "\nUploaded time : " + reel.getTimeStamp() +
-                        "\nLikes         : " + reel.getLikes() +
-                        "\nComments      : " + reel.getComments() +
                         "\nComments :"
         );
         displayComments(reelsManagerController.getComment(reel.getReelId()));

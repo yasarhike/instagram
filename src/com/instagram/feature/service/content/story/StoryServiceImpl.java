@@ -1,7 +1,7 @@
 package com.instagram.feature.service.content.story;
 
 import com.instagram.feature.model.content.story.Story;
-import com.instagram.feature.service.content.ContentServiceImplementation;
+import com.instagram.feature.service.content.ContentServiceImpl;
 
 import java.util.Map;
 
@@ -13,18 +13,18 @@ import java.util.Map;
  * @author Mohamed Yasar
  * @version 1.0 6 Feb 2024
  */
-public class StoryServiceImplementation {
+public class StoryServiceImpl {
 
-    private static StoryServiceImplementation storyServiceImplementation;
-    private final ContentServiceImplementation<Story> storyService;
+    private static StoryServiceImpl storyServiceImpl;
+    private final ContentServiceImpl<Story> storyService;
 
     /**
      * <p>
      * Private constructor to restrict the object creation outside of the class.
      * </p>
      */
-    private StoryServiceImplementation() {
-        storyService = new ContentServiceImplementation<>();
+    private StoryServiceImpl() {
+        storyService = new ContentServiceImpl<>();
     }
 
     /**
@@ -34,9 +34,9 @@ public class StoryServiceImplementation {
      *
      * @return The singleton instance of StoryServiceImplementation class.
      */
-    public static StoryServiceImplementation getInstance() {
-        return storyServiceImplementation == null ? storyServiceImplementation = new StoryServiceImplementation()
-                : storyServiceImplementation;
+    public static StoryServiceImpl getInstance() {
+        return storyServiceImpl == null ? storyServiceImpl = new StoryServiceImpl()
+                : storyServiceImpl;
     }
 
     /**
@@ -49,8 +49,6 @@ public class StoryServiceImplementation {
      * @return True if the story is added successfully, otherwise false.
      */
     public boolean addStory(final Story story, final Integer userId) {
-        story.setTimeStamp();
-        story.setStoryId(ContentServiceImplementation.getContentCount());
         return storyService.add(story, userId);
     }
 

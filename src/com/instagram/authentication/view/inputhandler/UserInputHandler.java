@@ -123,13 +123,12 @@ public class UserInputHandler {
      * @return Door number of the user.
      */
 
-    private String getDoorNumber() {
+    private int getDoorNumber() {
         logger.info("Enter the door number  - (enter # for back)");
-        final String doorNumber = scanner.nextLine();
+        final int doorNumber = Integer.parseInt(scanner.nextLine());
 
-        UserAccountView.getInstance().back(doorNumber);
 
-        return doorNumber.matches("[0-9]{1,4}") ? doorNumber : getDoorNumber();
+        return doorNumber != 0 ? doorNumber : getDoorNumber();
     }
 
     /**

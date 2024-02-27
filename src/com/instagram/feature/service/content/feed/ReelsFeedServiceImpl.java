@@ -1,9 +1,9 @@
-package com.instagram.feature.service;
+package com.instagram.feature.service.content.feed;
 
 import com.instagram.feature.model.content.contentactivity.Comment;
 import com.instagram.feature.model.content.reel.Reel;
-import com.instagram.feature.service.content.reel.ReelServiceImplementation;
-import com.instagram.feature.service.content.contentactivity.ReelCommentService;
+import com.instagram.feature.service.content.reel.ReelServiceImpl;
+import com.instagram.feature.service.content.contentactivity.ReelCommentServiceImpl;
 
 import java.util.List;
 import java.util.Map;
@@ -16,20 +16,20 @@ import java.util.Map;
  * @author Mohamed Yasar
  * @version 1.0 6 Feb 2024
  */
-public class ReelsFeedController {
+public class ReelsFeedServiceImpl {
 
-    private static ReelsFeedController reelsManagerService;
-    private final ReelServiceImplementation reelServiceImplementation;
-    private final ReelCommentService reelCommentService;
+    private static ReelsFeedServiceImpl reelsManagerService;
+    private final ReelServiceImpl reelServiceImpl;
+    private final ReelCommentServiceImpl reelCommentService;
 
     /**
      * <p>
      * Private constructor to restrict the object creation outside of the class.
      * </p>
      */
-    private ReelsFeedController() {
-        reelServiceImplementation = ReelServiceImplementation.getInstance();
-        reelCommentService = ReelCommentService.getInstance();
+    private ReelsFeedServiceImpl() {
+        reelServiceImpl = ReelServiceImpl.getInstance();
+        reelCommentService = ReelCommentServiceImpl.getInstance();
     }
 
     /**
@@ -39,8 +39,8 @@ public class ReelsFeedController {
      *
      * @return The singleton instance of ReelFeedController class.
      */
-    public static ReelsFeedController getInstance() {
-        return reelsManagerService == null ? reelsManagerService = new ReelsFeedController() : reelsManagerService;
+    public static ReelsFeedServiceImpl getInstance() {
+        return reelsManagerService == null ? reelsManagerService = new ReelsFeedServiceImpl() : reelsManagerService;
     }
 
     /**
@@ -51,7 +51,7 @@ public class ReelsFeedController {
      * @return A map containing reels, where the key is the post ID and the value is a map containing comments, where the key is the comment ID and the value is the comment object.
      */
     public Map<Integer, Map<Integer, Reel>> getReels() {
-        return reelServiceImplementation.getReel();
+        return reelServiceImpl.getReel();
     }
 
     /**

@@ -71,13 +71,16 @@ public class PostManager {
 
         switch (userChoice) {
             case 1:
-                postView.contentHomePage(user);
+                postView.add(user);
+                post(user);
                 break;
             case 2:
-                reelView.contentHomePage(user);
+                reelView.add(user);
+                post(user);
                 break;
             case 3:
-                storyView.contentHomePage(user);
+                storyView.add(user);
+                post(user);
                 break;
             case 4:
                 HomeView.getInstance().home(user);

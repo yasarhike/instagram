@@ -1,7 +1,8 @@
 package com.instagram.feature.controller.content.post;
 
 import com.instagram.feature.model.content.post.Post;
-import com.instagram.feature.service.content.post.PostServiceImplementation;
+import com.instagram.feature.service.content.post.PostServiceImpl;
+import com.instagram.feature.service.content.post.dao.PostServiceDAOImpl;
 
 import java.util.Map;
 
@@ -16,7 +17,7 @@ import java.util.Map;
 public class PostController {
 
     private static PostController postController;
-    private final PostServiceImplementation postService;
+    private final PostServiceDAOImpl postServiceDAOImpl;
 
     /**
      * <p>
@@ -24,7 +25,7 @@ public class PostController {
      * </p>
      */
     private PostController() {
-        postService = PostServiceImplementation.getInstance();
+        postServiceDAOImpl = PostServiceDAOImpl.getInstance();
     }
 
     /**
@@ -43,12 +44,11 @@ public class PostController {
      * Adds a post for the specified user.
      * </p>
      *
-     * @param post   Refer to the {@link Post} of the user.
-     * @param userId The userId of the user adding the post.
+     * @param post Refer to the {@link Post} of the user.
      * @return True if the post is added successfully, otherwise false.
      */
-    public boolean addPost(final Post post, final Integer userId) {
-        return postService.addPost(post, userId);
+    public boolean addPost(final Post post) {
+        return postServiceDAOImpl.addPost(post);
     }
 
     /**
@@ -61,17 +61,10 @@ public class PostController {
      * @return True if the post is removed successfully, otherwise false.
      */
     public boolean removePost(final Integer postId, final Integer userId) {
-        return postService.removePost(postId, userId);
+        return postServiceDAOImpl.removePost(postId, userId);
     }
 
-    /**
-     * <p>
-     * Retrieves all posts.
-     * </p>
-     *
-     * @return Map contains the user post.
-     */
-    public Map<Integer, Map<Integer, Post>> getPost() {
-        return postService.getPost();
+    public boolean updatePost(final Post post) {
+        return postServiceDAOImpl.updatePost(post);
     }
 }

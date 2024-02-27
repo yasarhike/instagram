@@ -1,7 +1,7 @@
 package com.instagram.feature.controller.contentactivity;
 
 import com.instagram.feature.model.content.contentactivity.Comment;
-import com.instagram.feature.service.content.contentactivity.PostCommentService;
+import com.instagram.feature.service.content.contentactivity.PostCommentServiceImpl;
 
 /**
  * <p>
@@ -14,7 +14,7 @@ import com.instagram.feature.service.content.contentactivity.PostCommentService;
 public class PostCommentController {
 
     private static PostCommentController postCommentController;
-    private final PostCommentService commentService;
+    private final PostCommentServiceImpl commentService;
 
     /**
      * <p>
@@ -22,7 +22,7 @@ public class PostCommentController {
      * </p>
      */
     private PostCommentController() {
-        commentService = PostCommentService.getInstance();
+        commentService = PostCommentServiceImpl.getInstance();
     }
 
     /**

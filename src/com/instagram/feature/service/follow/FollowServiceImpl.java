@@ -12,9 +12,9 @@ import java.util.*;
  * @author Mohamed Yasar
  * @version 1.0 6 Feb 2024
  */
-public class FollowService implements Follow {
+public class FollowServiceImpl implements Follow {
 
-    private static FollowService followService;
+    private static FollowServiceImpl followServiceImpl;
     private final Map<Integer, List<Integer>> followers;
     private final UserAccountServiceImplementation userServiceImplementation;
 
@@ -23,7 +23,7 @@ public class FollowService implements Follow {
      * Private constructor to restrict the object creation outside of the class.
      * </p>
      */
-    private FollowService() {
+    private FollowServiceImpl() {
         followers = new HashMap<>();
         userServiceImplementation = UserAccountServiceImplementation.getInstance();
     }
@@ -35,8 +35,8 @@ public class FollowService implements Follow {
      *
      * @return The singleton instance of FollowService class.
      */
-    public static FollowService getInstance() {
-        return followService == null ? followService = new FollowService() : followService;
+    public static FollowServiceImpl getInstance() {
+        return followServiceImpl == null ? followServiceImpl = new FollowServiceImpl() : followServiceImpl;
     }
 
     /**

@@ -1,7 +1,7 @@
 package com.instagram.feature.service.content.reel;
 
 import com.instagram.feature.model.content.reel.Reel;
-import com.instagram.feature.service.content.ContentServiceImplementation;
+import com.instagram.feature.service.content.ContentServiceImpl;
 
 import java.util.Map;
 
@@ -13,17 +13,17 @@ import java.util.Map;
  * @author Mohamed Yasar
  * @version 1.0 6 Feb 2024
  */
-public class ReelServiceImplementation {
-    private static ReelServiceImplementation reelServiceImplementation;
-    public final ContentServiceImplementation<Reel> reelService;
+public class ReelServiceImpl {
+    private static ReelServiceImpl reelServiceImpl;
+    public final ContentServiceImpl<Reel> reelService;
 
     /**
      * <p>
      * Private constructor to restrict the object creation outside of the class.
      * </p>
      */
-    private ReelServiceImplementation() {
-        reelService = new ContentServiceImplementation<>();
+    private ReelServiceImpl() {
+        reelService = new ContentServiceImpl<>();
     }
 
     /**
@@ -33,11 +33,11 @@ public class ReelServiceImplementation {
      *
      * @return The singleton instance of ReelServiceImplementation class.
      */
-    public static ReelServiceImplementation getInstance() {
-        if (reelServiceImplementation == null) {
-            reelServiceImplementation = new ReelServiceImplementation();
+    public static ReelServiceImpl getInstance() {
+        if (reelServiceImpl == null) {
+            reelServiceImpl = new ReelServiceImpl();
         }
-        return reelServiceImplementation;
+        return reelServiceImpl;
     }
 
     /**
@@ -50,8 +50,7 @@ public class ReelServiceImplementation {
      * @return True if the reel is added successfully, otherwise false.
      */
     public boolean addReel(final Reel reel, final Integer userId) {
-        reel.setTimeStamp();
-        reel.setReelId(ContentServiceImplementation.getContentCount());
+        reel.setReelId(ContentServiceImpl.getContentCount());
         return reelService.add(reel, userId);
     }
 

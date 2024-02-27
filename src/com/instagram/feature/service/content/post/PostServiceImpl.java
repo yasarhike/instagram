@@ -1,7 +1,7 @@
 package com.instagram.feature.service.content.post;
 
 import com.instagram.feature.model.content.post.Post;
-import com.instagram.feature.service.content.ContentServiceImplementation;
+import com.instagram.feature.service.content.ContentServiceImpl;
 
 import java.util.Map;
 
@@ -13,29 +13,30 @@ import java.util.Map;
  * @author Mohamed Yasar
  * @version 1.0 6 Feb 2024
  */
-public class PostServiceImplementation {
+public class PostServiceImpl {
 
-    private static PostServiceImplementation postServiceImplementation;
-    private final ContentServiceImplementation<Post> postService;
+    private static PostServiceImpl postServiceImplementation;
+    private final ContentServiceImpl<Post> postService;
 
     /**
      * <p>
      * Private constructor to restrict the object creation outside of the class.
      * </p>
      */
-    private PostServiceImplementation() {
-        postService = new ContentServiceImplementation<>();
+    private PostServiceImpl() {
+        postService = new ContentServiceImpl<>();
     }
 
     /**
+     * {@inheritDoc}
      * <p>
      * Returns the singleton instance of PostServiceImplementation class.
      * </p>
      *
      * @return The singleton instance of PostServiceImplementation class.
      */
-    public static PostServiceImplementation getInstance() {
-        return postServiceImplementation == null ? postServiceImplementation = new PostServiceImplementation()
+    public static PostServiceImpl getInstance() {
+        return postServiceImplementation == null ? postServiceImplementation = new PostServiceImpl()
                 : postServiceImplementation;
     }
 
@@ -49,8 +50,7 @@ public class PostServiceImplementation {
      * @return True if the post is added successfully, otherwise false.
      */
     public boolean addPost(final Post post, final Integer userId) {
-        post.setTimestamp();
-        post.setPostId(ContentServiceImplementation.getContentCount());
+        post.setPostId(ContentServiceImpl.getContentCount());
 
         return postService.add(post, userId);
     }

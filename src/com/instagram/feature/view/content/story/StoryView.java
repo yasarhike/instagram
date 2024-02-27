@@ -53,11 +53,13 @@ public class StoryView extends Content {
 
         final Story story = new Story();
 
-        story.setAuthor(user.getName());
+        story.setUserId(user.getUserId());
         story.setPrivate(userInformationHandler.getIsPrivate());
+        story.setMedia(userInformationHandler.getType());
+        story.setText(userInformationHandler.getCaption());
+        story.setMusic(userInformationHandler.getMusic());
 
         if (storyController.addStory(story, user.getUserId())) {
-            user.setStory(user.getStory() + 1);
             System.out.println("Story added successful");
             PostManager.getInstance().post(user);
         } else {
@@ -77,7 +79,6 @@ public class StoryView extends Content {
         final int storyId = userInformationHandler.getPostId();
 
         if (storyController.removeStory(storyId, user.getUserId())) {
-            user.setStory(user.getStory() - 1);
             System.out.println("story removed successful");
             PostManager.getInstance().post(user);
         } else {

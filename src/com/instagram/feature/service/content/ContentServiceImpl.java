@@ -12,7 +12,7 @@ import java.util.Map;
  * @author Mohamed Yasar
  * @version 1.0 6 Feb 2024
  */
-public class ContentServiceImplementation<T> implements ContentService<T> {
+public class ContentServiceImpl<T> implements ContentService<T> {
 
     private static Integer contentCount = 0;
     private final Map<Integer, Map<Integer, T>> content;
@@ -22,7 +22,7 @@ public class ContentServiceImplementation<T> implements ContentService<T> {
      * Constructs a new ServiceImplementation object.
      * </p>
      */
-    public ContentServiceImplementation() {
+    public ContentServiceImpl() {
         content = new HashMap<>();
     }
 

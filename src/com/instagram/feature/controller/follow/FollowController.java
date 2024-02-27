@@ -1,6 +1,6 @@
 package com.instagram.feature.controller.follow;
 
-import com.instagram.feature.service.follow.FollowService;
+import com.instagram.feature.service.follow.FollowServiceImpl;
 
 /**
  * <p>
@@ -13,7 +13,7 @@ import com.instagram.feature.service.follow.FollowService;
 public class FollowController {
 
     private static FollowController followController;
-    private static FollowService followService;
+    private static FollowServiceImpl followServiceImpl;
 
     /**
      * <p>
@@ -21,7 +21,7 @@ public class FollowController {
      * </p>
      */
     private FollowController() {
-        followService = FollowService.getInstance();
+        followServiceImpl = FollowServiceImpl.getInstance();
     }
 
     /**
@@ -45,7 +45,7 @@ public class FollowController {
      * @return True if the follower is added successfully, otherwise false.
      */
     public boolean addFollower(final int userId, final int followerId) {
-        return followService.addFollower(userId, followerId);
+        return followServiceImpl.addFollower(userId, followerId);
     }
 
     /**
@@ -58,6 +58,6 @@ public class FollowController {
      * @return True if the follower is removed successfully, otherwise false.
      */
     public boolean removeFollower(final Integer userId, final Integer followerId) {
-        return followService.removeFollower(userId, followerId);
+        return followServiceImpl.removeFollower(userId, followerId);
     }
 }

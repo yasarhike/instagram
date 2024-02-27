@@ -185,17 +185,14 @@ public class UserAccountServiceImplementation implements UserAccountService {
      *
      * @param newValue The new email to be set for the user.
      * @param user     Refers to the {@link User} whose email is to be updated.
-     * @return True if the email is successfully updated, otherwise false.
      */
-    private boolean updateMail(final String newValue, final User user) {
+    private void updateMail(final String newValue, final User user) {
         if (usersByMailEmail.containsKey(user.getEmail())) {
             usersByMailEmail.get(user.getEmail()).setEmail(newValue);
             usersByMailEmail.put(newValue, usersByMailEmail.get(user.getEmail()));
             usersByMailEmail.remove(user.getEmail());
             user.setEmail(newValue);
-            return true;
         }
-        return false;
     }
 
     /**
@@ -205,17 +202,14 @@ public class UserAccountServiceImplementation implements UserAccountService {
      *
      * @param newValue The new mobile to be set for the user.
      * @param user     Refers to the {@link User} whose mobile is to be updated.
-     * @return True if the mobile is successfully updated, otherwise false.
      */
-    private boolean updateMobile(final String newValue, final User user) {
+    private void updateMobile(final String newValue, final User user) {
         if (usersByMailEmail.containsKey(user.getMobileNumber())) {
             usersByMailEmail.get(user.getMobileNumber()).setMobileNumber(newValue);
             usersByMailEmail.put(newValue, usersByMailEmail.get(user.getMobileNumber()));
             usersByMailEmail.remove(user.getMobileNumber());
             user.setMobileNumber(newValue);
-            return true;
         }
-        return false;
     }
 
     /**

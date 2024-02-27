@@ -55,10 +55,10 @@ public class PostView extends Content {
     public void add(final User user) {
         final Post post = new Post();
 
-        post.setAuthor(user.getName());
+        post.setUserId(user.getUserId());
         userInformationHandler.getUserDetails(post);
 
-        if (postController.addPost(post, user.getUserId())) {
+        if (postController.addPost(post)) {
             user.setPost(user.getPost() + 1);
 
             logger.debug("posted successfully");
@@ -80,7 +80,6 @@ public class PostView extends Content {
         final int postId = userInformationHandler.getPostId();
 
         if (postController.removePost(postId, user.getUserId())) {
-            user.setPost(user.getPost() - 1);
 
             logger.debug("Post removed successful");
             PostManager.getInstance().post(user);
@@ -88,5 +87,9 @@ public class PostView extends Content {
             logger.debug("operation failed");
             PostManager.getInstance().post(user);
         }
+    }
+
+    public void edit(final Post post) {
+
     }
 }

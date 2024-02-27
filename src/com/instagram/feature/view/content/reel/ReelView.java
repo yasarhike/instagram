@@ -57,17 +57,15 @@ public class ReelView extends Content {
     public void add(User user) {
         final Reel reel = new Reel();
 
-        reel.setAuthor(user.getName());
+        reel.setUserId(user.getUserId());
         reel.setCaption(userInformationHandler.getCaption());
         reel.setPrivate(userInformationHandler.getIsPrivate());
+        reel.setDuration(userInformationHandler.getDuration());
 
         if (reelController.addReel(reel, user.getUserId())) {
-            user.setReels(user.getReels() + 1);
-
             logger.debug("Reel added successful");
             PostManager.getInstance().post(user);
         } else {
-
             logger.debug("Operation failed");
             PostManager.getInstance().post(user);
         }
@@ -84,7 +82,6 @@ public class ReelView extends Content {
         final int postId = userInformationHandler.getPostId();
 
         if (reelController.removeReel(postId, user.getUserId())) {
-            user.setReels(user.getReels() - 1);
 
             logger.debug("Post removed successful");
             PostManager.getInstance().post(user);

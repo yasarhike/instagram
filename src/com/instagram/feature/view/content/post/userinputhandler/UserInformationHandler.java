@@ -1,6 +1,7 @@
 package com.instagram.feature.view.content.post.userinputhandler;
 
 import com.instagram.feature.model.content.post.Post;
+import com.instagram.feature.service.content.contentactivity.media.Media;
 import com.instagram.scanner.SingletonScanner;
 import org.apache.log4j.Logger;
 
@@ -61,12 +62,12 @@ public class UserInformationHandler {
      *
      * @return Type of the post.
      */
-    private String getType() {
-        logger.info("Enter the type :(image or video)");
-        final String getType = scanner.nextLine();
+    public Media getType() {
+        logger.info("Enter the type :(Press - 1 for image, Press 2 for video)");
+        final Media media = Media.getMedia(Integer.parseInt(scanner.nextLine()));
 
-        return getType.equalsIgnoreCase("image") || getType.equalsIgnoreCase("video")
-                ? getType : getType();
+        return media != null
+                ? media : getType();
     }
 
     /**
@@ -95,6 +96,15 @@ public class UserInformationHandler {
         return Integer.parseInt(scanner.nextLine());
     }
 
+    public String getDuration() {
+        logger.info("Enter the duration");
+        return scanner.nextLine();
+    }
+
+    public String getMusic() {
+        logger.info("Enter the music :");
+        return scanner.nextLine();
+    }
     /**
      * <p>
      * Get the user details.

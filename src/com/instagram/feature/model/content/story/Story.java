@@ -1,5 +1,7 @@
 package com.instagram.feature.model.content.story;
 
+import com.instagram.feature.service.content.contentactivity.media.Media;
+
 import java.time.Instant;
 
 /**
@@ -12,10 +14,12 @@ import java.time.Instant;
  */
 public class Story {
 
-    private String author;
     private boolean isPrivate;
     private int storyId;
-    private Instant timeStamp;
+    private Media media;
+    private String music;
+    private String text;
+    private int userId;
 
     public boolean isPrivate() {
         return isPrivate;
@@ -25,27 +29,39 @@ public class Story {
         this.isPrivate = isPrivate;
     }
 
-    public String getAuthor() {
-        return author;
-    }
-
-    public void setAuthor(final String author) {
-        this.author = author;
-    }
-
-    public Instant getTimeStamp() {
-        return timeStamp;
-    }
-
-    public int isStoryId() {
-        return storyId;
-    }
-
     public void setStoryId(final int storyId) {
         this.storyId = storyId;
     }
 
-    public void setTimeStamp() {
-        this.timeStamp = Instant.now();
+    public Media getMedia() {
+        return media;
+    }
+
+    public void setMedia(Media media) {
+        this.media = media;
+    }
+
+    public String getMusic() {
+        return music;
+    }
+
+    public void setMusic(String music) {
+        this.music = music;
+    }
+
+    public String getText() {
+        return text;
+    }
+
+    public void setText(String text) {
+        this.text = text;
+    }
+
+    public int getUserId() {
+        return userId;
+    }
+
+    public void setUserId(int userId) {
+        this.userId = userId;
     }
 }

@@ -2,6 +2,7 @@ package com.instagram.authentication.controller;
 
 import com.instagram.authentication.model.User;
 import com.instagram.authentication.service.UserAccountServiceImplementation;
+import com.instagram.authentication.service.dao.UserAccountDAOImpl;
 
 /**
  * <p>
@@ -14,7 +15,7 @@ import com.instagram.authentication.service.UserAccountServiceImplementation;
 public class UserAccountController {
 
     private static UserAccountController profileController;
-    private final UserAccountServiceImplementation profileServiceImplementation;
+    private final UserAccountDAOImpl userAccountDAOImpl;
 
     /**
      * <p>
@@ -22,7 +23,7 @@ public class UserAccountController {
      * </p>
      */
     private UserAccountController() {
-        profileServiceImplementation = UserAccountServiceImplementation.getInstance();
+        userAccountDAOImpl = UserAccountDAOImpl.getInstance();
     }
 
     /**
@@ -45,7 +46,7 @@ public class UserAccountController {
      * @return True if the user profile is successfully created, otherwise false.
      */
     public boolean createProfile(final User user) {
-        return profileServiceImplementation.createProfile(user);
+        return userAccountDAOImpl.createProfile(user);
     }
 
     /**
@@ -59,20 +60,5 @@ public class UserAccountController {
      * @param type          Refers to the type of key (e.g., "mobile", "userId", etc.).
      * @return {@link User} Return the user profile if the data is correct, otherwise null.
      */
-    public User getProfile(final String mobileOrEmail, final int id, final String password, final String type) {
-        return profileServiceImplementation.getProfile(mobileOrEmail, id, password, type);
-    }
 
-    /**
-     * <p>
-     * Updates the specified type of information for the given user profile.
-     * </p>
-     *
-     * @param type     Refers to the type of information to be updated (e.g., "email", "password", etc.).
-     * @param newValue Refers to the new value to be set for the specified type of information.
-     * @param user     Refers to the {@link User} whose profile information is to be updated.
-     */
-    public void updateProfile(final String type, final String newValue, final User user) {
-        profileServiceImplementation.updateProfile(type, newValue, user);
-    }
 }

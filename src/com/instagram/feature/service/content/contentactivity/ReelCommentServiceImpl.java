@@ -14,9 +14,9 @@ import java.util.Map;
  * @author Mohamed Yasar
  * @version 1.0 6 Feb 2024
  */
-public class ReelCommentService {
+public class ReelCommentServiceImpl {
 
-    private static ReelCommentService commentService;
+    private static ReelCommentServiceImpl commentService;
     private static int commentId;
     private final Map<Integer, List<Comment>> comments;
 
@@ -25,7 +25,7 @@ public class ReelCommentService {
      * Private constructor to restrict the object creation outside of the class.
      * </p>
      */
-    private ReelCommentService() {
+    private ReelCommentServiceImpl() {
         comments = new HashMap<>();
     }
 
@@ -36,8 +36,8 @@ public class ReelCommentService {
      *
      * @return The singleton instance of PostCommentService class.
      */
-    public static ReelCommentService getInstance() {
-        return commentService == null ? commentService = new ReelCommentService() : commentService;
+    public static ReelCommentServiceImpl getInstance() {
+        return commentService == null ? commentService = new ReelCommentServiceImpl() : commentService;
     }
 
     /**

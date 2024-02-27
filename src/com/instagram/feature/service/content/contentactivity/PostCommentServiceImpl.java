@@ -15,18 +15,19 @@ import java.util.Map;
  * @author Mohamed Yasar
  * @version 1.0 6 Feb 2024
  */
-public class PostCommentService {
+public class PostCommentServiceImpl {
 
-    private static PostCommentService commentService;
+    private static PostCommentServiceImpl commentService;
     private static int commentId;
     private final Map<Integer, List<Comment>> comments;
 
     /**
+     * {@inheritDoc}
      * <p>
      * Private constructor to restrict the object creation outside of the class.
      * </p>
      */
-    private PostCommentService() {
+    private PostCommentServiceImpl() {
         comments = new HashMap<>();
     }
 
@@ -37,8 +38,8 @@ public class PostCommentService {
      *
      * @return The singleton instance of PostCommentService class.
      */
-    public static PostCommentService getInstance() {
-        return commentService == null ? commentService = new PostCommentService() : commentService;
+    public static PostCommentServiceImpl getInstance() {
+        return commentService == null ? commentService = new PostCommentServiceImpl() : commentService;
     }
 
     /**

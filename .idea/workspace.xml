@@ -4,11 +4,52 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b09bd521-a14e-420a-b78e-90b7777dc337" name="Changes" comment="">
+    <list default="true" id="b09bd521-a14e-420a-b78e-90b7777dc337" name="Changes" comment="first commit">
+      <change afterPath="$PROJECT_DIR$/src/com/instagram/authentication/service/dao/UserAccountDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/instagram/authentication/service/dao/UserAccountDAOImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/instagram/feature/service/content/contentactivity/media/Media.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/instagram/feature/service/content/feed/ReelsFeedService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/instagram/feature/service/content/post/PostService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/instagram/feature/service/content/post/dao/PostServiceDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/instagram/feature/service/content/post/dao/PostServiceDAOImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/instagram/feature/service/content/reel/ReelService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/instagram/feature/service/content/reel/dao/ReelServiceDAOImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/instagram/feature/service/content/story/StoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/instagram/feature/service/content/story/dao/StoryServiceDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/instagram/feature/service/content/story/dao/StoryServiceDAOImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Instagram.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Instagram.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/instagram/authentication/controller/UserAccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/instagram/authentication/controller/UserAccountController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/instagram/authentication/model/Address.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/instagram/authentication/model/Address.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/instagram/authentication/service/UserAccountServiceImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/instagram/authentication/service/UserAccountServiceImplementation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/instagram/feature/controller/ReelsFeedController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/instagram/feature/controller/ReelsFeedController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/instagram/authentication/view/AuthenticationView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/instagram/authentication/view/AuthenticationView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/instagram/authentication/view/UserAccountView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/instagram/authentication/view/UserAccountView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/instagram/authentication/view/inputhandler/UserInputHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/instagram/authentication/view/inputhandler/UserInputHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/instagram/feature/controller/content/post/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/instagram/feature/controller/content/post/PostController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/instagram/feature/controller/content/reel/ReelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/instagram/feature/controller/content/reel/ReelController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/instagram/feature/controller/content/story/StoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/instagram/feature/controller/content/story/StoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/instagram/feature/controller/contentactivity/PostCommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/instagram/feature/controller/contentactivity/PostCommentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/instagram/feature/controller/contentactivity/ReelCommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/instagram/feature/controller/contentactivity/ReelCommentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/instagram/feature/controller/follow/FollowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/instagram/feature/controller/follow/FollowController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/instagram/feature/model/content/post/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/instagram/feature/model/content/post/Post.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/instagram/feature/model/content/reel/Reel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/instagram/feature/model/content/reel/Reel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/instagram/feature/model/content/story/Story.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/instagram/feature/model/content/story/Story.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/instagram/feature/service/ReelsFeedController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/instagram/feature/service/content/feed/ReelsFeedServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/instagram/feature/service/content/ContentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/instagram/feature/service/content/ContentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/instagram/feature/service/content/ContentServiceImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/instagram/feature/service/content/ContentServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/instagram/feature/service/content/contentactivity/PostCommentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/instagram/feature/service/content/contentactivity/PostCommentServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/instagram/feature/service/content/contentactivity/ReelCommentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/instagram/feature/service/content/contentactivity/ReelCommentServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/instagram/feature/service/content/post/PostServiceImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/instagram/feature/service/content/post/PostServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/instagram/feature/service/content/reel/ReelServiceImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/instagram/feature/service/content/reel/ReelServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/instagram/feature/service/content/story/StoryServiceImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/instagram/feature/service/content/story/StoryServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/instagram/feature/service/follow/FollowService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/instagram/feature/service/follow/FollowServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/instagram/feature/view/ReelsFeedView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/instagram/feature/view/ReelsFeedView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/instagram/feature/view/content/post/PostView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/instagram/feature/view/content/post/PostView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/instagram/feature/view/content/post/userinputhandler/UserInformationHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/instagram/feature/view/content/post/userinputhandler/UserInformationHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/instagram/feature/view/content/reel/ReelView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/instagram/feature/view/content/reel/ReelView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/instagram/feature/view/content/story/StoryView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/instagram/feature/view/content/story/StoryView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/instagram/feature/view/home/HomeView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/instagram/feature/view/home/HomeView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/instagram/feature/view/home/PostManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/instagram/feature/view/home/PostManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +59,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Enum" />
         <option value="Interface" />
         <option value="Class" />
       </list>
@@ -54,7 +96,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/apache-log4j-1.2.17/log4j-1.2.17.jar&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/postgresql-42.6.0.jar&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -64,6 +106,7 @@
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors.Console Font&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -106,6 +149,9 @@
     </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\yasar\AppData\Roaming\Subversion</configuration>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="b09bd521-a14e-420a-b78e-90b7777dc337" name="Changes" comment="" />
@@ -139,7 +185,20 @@
       <workItem from="1708142884622" duration="17000000" />
       <workItem from="1708236824148" duration="1866000" />
       <workItem from="1708314565479" duration="7434000" />
+      <workItem from="1708400871334" duration="4616000" />
+      <workItem from="1708946631108" duration="12511000" />
+      <workItem from="1709006292626" duration="15966000" />
+      <workItem from="1709024335185" duration="19722000" />
     </task>
+    <task id="LOCAL-00001" summary="first commit">
+      <option name="closed" value="true" />
+      <created>1708400906612</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1708400906612</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -155,5 +214,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="first commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="first commit" />
   </component>
 </project>
